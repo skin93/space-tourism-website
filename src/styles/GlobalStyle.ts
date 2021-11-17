@@ -1,4 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
+import HomeMobile from 'assets/home/background-home-mobile.jpg';
+import HomeTablet from 'assets/home/background-home-tablet.jpg';
 import HomeDesktop from 'assets/home/background-home-desktop.jpg';
 
 export const theme = {
@@ -12,86 +14,134 @@ export const theme = {
     barlow: "'Barlow', sans-serif;",
     barlowCondensed: "'Barlow Condensed', sans-serif",
   },
+  bellefairLight: css`
+    font-family: 'Bellefair', serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+  `,
+  barlowLight: css`
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+  `,
+  barlowCondesedLight: css`
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+  `,
 };
 
-const BellafirLight = styled.p`
-  font-family: ${theme.fontFamily.bellefair};
-  color: ${theme.colors.light};
-  text-transform: uppercase;
-`;
-
-const BarlowCondensedLight = styled.p`
-  font-family: ${(props) => props.theme.fontFamily.barlowCondensed};
-  color: ${theme.colors.light};
-  text-transform: uppercase;
-`;
-
-const BarlowLight = styled.p`
-  font-family: ${(props) => props.theme.fontFamily.barlow};
-  color: ${theme.colors.light};
-`;
-
-export const H1 = styled(BellafirLight)`
-  font-size: 150px;
-  margin: 24px 0;
+export const H1 = styled.h1`
+  ${theme.bellefairLight}
   letter-spacing: 0;
+  font-size: 80px;
+  line-height: 1.7;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 150px;
+  }
+
+  @media (min-width: 1440px) {
+    line-height: auto;
+  }
 `;
 
-export const H2 = styled(BellafirLight)`
-  font-size: 100px;
-`;
-
-export const H3 = styled(BellafirLight)`
+export const H2 = styled.h2`
+  ${theme.bellefairLight}
   font-size: 56px;
+
+  @media (min-width: 768px) {
+    font-size: 80px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 100px;
+  }
 `;
 
-export const H4 = styled(BellafirLight)`
+export const H3 = styled.h3`
+  ${theme.bellefairLight}
+  font-size: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 56px;
+  }
+`;
+
+export const H4 = styled.h4`
+  ${theme.bellefairLight}
   font-size: 32px;
 `;
 
-export const H5 = styled(BarlowCondensedLight)`
-  font-size: 28px;
-  letter-spacing: 4.75px;
+export const H5 = styled.h5`
+  ${theme.barlowCondesedLight}
   color: ${theme.colors.accent};
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  }
 `;
 
-export const SubHead1 = styled(BellafirLight)`
+export const SubHead1 = styled.p`
+  ${theme.bellefairLight}
   font-size: 28px;
 `;
 
-export const SubHead2 = styled(BarlowCondensedLight)`
+export const SubHead2 = styled.p`
+  ${theme.barlowCondesedLight}
   font-size: 14px;
-  letter-spacing: 2.35;
+  letter-spacing: 2.35px;
 `;
 
 export const Main = styled.main`
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(${HomeDesktop});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* height: 100vh; */
+  /* min-height: 100vh; */
 `;
 
-// export const Heading = styled.h2`
-//   color: ${theme.colors.accent};
-//   font-size: 1.75rem;
-//   font-family: ${theme.fontFamily.barlowCondensed};
-//   font-weight: 200;
-//   text-transform: uppercase;
-//   letter-spacing: 4.72px;
-// `;
-
 export const Text = styled.p`
+  ${theme.barlowLight}
   color: ${theme.colors.accent};
-  font-family: ${theme.fontFamily.barlow};
   font-size: 1.125rem;
   line-height: 2;
   letter-spacing: 0;
 `;
 
-export const BodyText = styled(BarlowLight)`
+export const BodyText = styled.p`
+  ${theme.barlowLight}
+  color: ${(props) => props.theme.colors.accent};
   line-height: 2;
+  font-size: 15px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 28;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 32;
+  }
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -101,12 +151,28 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+body {
+  padding: 24px;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(${HomeMobile});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 768px){
+    background-image: url(${HomeTablet});
+  }
+
+  @media (min-width: 1440px){
+    background-image: url(${HomeDesktop});
+  }
+}
+
 a {
-  font-family: ${theme.fontFamily.barlowCondensed};
-  color: ${theme.colors.light};
+  ${theme.barlowCondesedLight};
   font-size: 1rem;
-  letter-spacing: 2.7;
+  letter-spacing: 2.7px;
   text-decoration: none;
-  
 }
 `;

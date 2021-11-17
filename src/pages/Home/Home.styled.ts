@@ -1,32 +1,32 @@
 import styled from 'styled-components';
 
 export const Hero = styled.div`
-  position: absolute;
-  top: calc(100vh / 2.33);
-  left: calc(100vw / 8.73);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  max-width: 450px;
-  height: 100%;
-  max-height: 382px;
+  height: 100%; */
+`;
 
-  & > h2 {
-    & > span {
-      display: block;
-      color: ${(props) => props.theme.colors.light};
-      font-size: 9.375rem;
-      font-family: ${(props) => props.theme.fontFamily.bellefair};
-      text-transform: uppercase;
-      margin: 24px 0;
-    }
-  }
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ButtonWrapper = styled.div`
-  position: absolute;
-  width: 274px;
-  height: 274px;
-  left: calc(100vw / 1.44);
-  top: calc(100vh / 1.82);
+  width: 150px;
+  height: 150px;
+  margin: calc(100vh / 8.23) auto 0;
+
+  @media (min-width: 760px) {
+    width: 242px;
+    height: 242px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 274px;
+    height: 274px;
+  }
 `;
 
 export const ExploreButton = styled.button`
@@ -36,9 +36,14 @@ export const ExploreButton = styled.button`
   background-color: #fff;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 2rem;
+  letter-spacing: 1.25px;
+  font-size: 20px;
   color: ${(props) => props.theme.colors.dark};
   font-family: ${(props) => props.theme.fontFamily.bellefair};
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    letter-spacing: 2px;
+    font-size: 32px;
+  }
 `;
