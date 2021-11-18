@@ -1,5 +1,5 @@
 import { BodyText, H1, H5 } from 'styles/GlobalStyle';
-import { Wrapper, ButtonWrapper, ExploreButton, Hero } from './Home.styled';
+import { ExploreButton, Hero } from './Home.styled';
 
 export default function HomePage() {
   return (
@@ -14,9 +14,7 @@ export default function HomePage() {
           experience!
         </BodyText>
       </Hero>
-      <ButtonWrapper>
-        <ExploreButton>Explore</ExploreButton>
-      </ButtonWrapper>
+      <ExploreButton>Explore</ExploreButton>
     </>
   );
 }
