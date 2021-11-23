@@ -8,27 +8,6 @@ export const Hero = styled.div`
   height: 100%; */
 `;
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-// export const ButtonWrapper = styled.div`
-//   width: 150px;
-//   height: 150px;
-//   margin: calc(100vh / 8.23) auto 0;
-
-//   @media (min-width: 760px) {
-//     width: 242px;
-//     height: 242px;
-//   }
-
-//   @media (min-width: 1440px) {
-//     width: 274px;
-//     height: 274px;
-//   }
-// `;
-
 export const ExploreButton = styled.button`
   position: relative;
   width: 150px;

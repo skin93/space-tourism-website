@@ -10,15 +10,23 @@ export const StyledHeader = styled.header`
   @media (min-width: 768px) {
     margin-top: 0;
   }
+
+  @media (min-width: 1440px) {
+    margin-top: 40px;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   width: 40px;
   height: 40px;
-  margin-left: 24px;
-  @media (min-width: 76px) {
+  margin-left: 39px;
+  @media (min-width: 768px) {
     width: 48px;
     height: 48px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 55px;
   }
 `;
 
