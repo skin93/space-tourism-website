@@ -13,6 +13,7 @@ export const StyledHeader = styled.header`
 
   @media (min-width: 1440px) {
     margin-top: 40px;
+    position: relative;
   }
 `;
 
@@ -48,11 +49,14 @@ export const Icon = styled.img`
 
 export const Line = styled.div`
   display: none;
-  /* position: absolute;
-  left: calc(100vw / 8.62);
-  z-index: 100;
-  width: calc(100vw / 3.04);
-  height: 1px;
-  background: #fff;
-  opacity: 25.15%; */
+  @media (min-width: 1440px) {
+    position: absolute;
+    display: inline-block;
+    margin-left: 300px;
+    z-index: 100;
+    width: 473px;
+    height: 1px;
+    background: #fff;
+    opacity: 25.15%;
+  }
 `;
