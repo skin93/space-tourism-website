@@ -175,4 +175,8 @@ a {
   letter-spacing: 2.7px;
   text-decoration: none;
 }
+
+ul {
+  list-style: none;
+}
 `;

@@ -18,14 +18,13 @@ export const Logo = styled.img`
   height: 100%;
 `;
 
-export const HamburgerWrapper = styled.div`
-  width: 24px;
-  height: 21px;
-`;
+export const IconWrapper = styled.div``;
 
-export const Hamburger = styled.img`
-  width: 100%;
-  height: 100%;
+export const Icon = styled.img`
+  z-index: 101;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Line = styled.div`
