@@ -1,5 +1,12 @@
 import { useState } from 'react';
-import { Icon, Line, Logo, LogoWrapper, StyledHeader } from './Header.styled';
+import {
+  Icon,
+  IconWrapper,
+  Line,
+  Logo,
+  LogoWrapper,
+  StyledHeader,
+} from './Header.styled';
 import logo from 'assets/shared/logo.svg';
 import hamburger from 'assets/shared/icon-hamburger.svg';
 import iconClose from 'assets/shared/icon-close.svg';
@@ -13,11 +20,13 @@ export default function Header() {
       <LogoWrapper>
         <Logo src={logo} alt='Logo' />
       </LogoWrapper>
-      <Icon
-        src={open ? iconClose : hamburger}
-        alt='Icon'
-        onClick={() => setOpen(!open)}
-      />
+      <IconWrapper>
+        <Icon
+          src={open ? iconClose : hamburger}
+          alt='Icon'
+          onClick={() => setOpen(!open)}
+        />
+      </IconWrapper>
       <Line />
       <Navbar />
       <MobileNavbar open={open} />

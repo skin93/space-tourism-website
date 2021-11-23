@@ -6,11 +6,20 @@ export const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   background: transparent;
+  margin-top: 24px;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   width: 40px;
   height: 40px;
+  margin-left: 24px;
+  @media (min-width: 76px) {
+    width: 48px;
+    height: 48px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -18,10 +27,13 @@ export const Logo = styled.img`
   height: 100%;
 `;
 
-export const IconWrapper = styled.div``;
+export const IconWrapper = styled.div`
+  margin-right: 24px;
+`;
 
 export const Icon = styled.img`
   z-index: 101;
+
   @media (min-width: 768px) {
     display: none;
   }

@@ -22,9 +22,11 @@ export const MobileMenu = styled.ul`
   margin-top: 70px;
 `;
 
-export const MenuItem = styled.li`
+export const MobileMenuItem = styled.li`
   ${(props) => props.theme.barlowCondesedLight}
-  letter-spacing: 2.7px;
+  & > a {
+    letter-spacing: 2.7px;
+  }
   margin-block: 20px;
   & span {
     font-weight: 600;

@@ -111,6 +111,7 @@ export const SubHead2 = styled.p`
 
 export const Main = styled.main`
   margin-top: 46px;
+  padding-inline: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -152,7 +153,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  padding: 24px;
+
   width: 100%;
   min-height: 100vh;
   background-image: url(${HomeMobile});
