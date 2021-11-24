@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BodyText, Divider, H2, Wrapper } from 'styles/GlobalStyle';
+import { BodyText, Divider, H2, Section, Wrapper } from 'styles/GlobalStyle';
 import DestinationMobile from 'assets/destination/background-destination-mobile.jpg';
 import DestinationTablet from 'assets/destination/background-destination-tablet.jpg';
 import DestinationDesktop from 'assets/destination/background-destination-desktop.jpg';
@@ -16,10 +16,22 @@ export const DestinationWrapper = styled(Wrapper)`
   }
 `;
 
+export const DestinationSection = styled(Section)`
+  @media (min-width: 768px) {
+    padding-top: 136px;
+    padding-bottom: 62px;
+  }
+`;
+
 export const Img = styled.img`
   width: 170px;
   height: 170px;
   margin-block: 51px;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 export const Destinations = styled.ul`
@@ -34,6 +46,11 @@ export const DestinationElement = styled.li`
   font-size: 14px;
   letter-spacing: 2.36px;
   margin-inline: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+  }
 
   &.active {
     color: ${(props) => props.theme.colors.light};
@@ -57,10 +74,29 @@ export const Description = styled(BodyText)`
   margin-top: 1px;
   font-size: 15px;
   line-height: 2.5;
+  @media (min-width: 768px) {
+    margin-inline: auto;
+    width: 573px;
+    font-size: 16px;
+    letter-spacing: 2.8;
+  }
 `;
 
 export const StyledDivider = styled(Divider)`
   margin-top: 24px;
+  background-color: ${(props) => props.theme.colors.border};
+  @media (min-width: 768px) {
+    width: 573px;
+    margin-inline: auto;
+  }
+`;
+
+export const Info = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+  }
 `;
 
 export const AvgDist = styled.div`

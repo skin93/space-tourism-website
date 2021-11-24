@@ -5,6 +5,7 @@ export const theme = {
     light: '#FFF',
     dark: '#0B0D17',
     accent: '#D0D6F9',
+    border: '#979797',
   },
   fontFamily: {
     bellefair: "'Bellefair', serif",
@@ -129,7 +130,7 @@ export const BodyText = styled.p`
 
   @media (min-width: 1440px) {
     font-size: 18px;
-    line-height: 32;
+    line-height: 3.2;
   }
 `;
 
@@ -139,6 +140,12 @@ export const InteractiveElement = styled.div`
   & span {
     color: ${theme.colors.light};
     opacity: 25%;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 3.38px;
   }
 `;
 
@@ -157,6 +164,10 @@ export const Wrapper = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-width: 768px) {
+    padding-inline: 39px;
+  }
 `;
 
 export const Section = styled.section`

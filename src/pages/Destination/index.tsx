@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import {
-  InteractiveElement,
-  Section,
-  SubHead1,
-  SubHead2,
-} from 'styles/GlobalStyle';
+import { InteractiveElement, SubHead1, SubHead2 } from 'styles/GlobalStyle';
 import {
   Img,
+  DestinationSection,
   Destinations,
   DestinationElement,
   Description,
@@ -15,6 +11,7 @@ import {
   DestinationWrapper,
   AvgDist,
   EstTime,
+  Info,
 } from './Destination.styled';
 
 type Destination = {
@@ -64,7 +61,7 @@ export default function DestinationPage() {
 
   return (
     <DestinationWrapper>
-      <Section>
+      <DestinationSection>
         <InteractiveElement>
           <span>01</span> Pick Your Destination
         </InteractiveElement>
@@ -81,16 +78,18 @@ export default function DestinationPage() {
           <Name>{selected.name}</Name>
           <Description>{selected.description}</Description>
           <StyledDivider />
-          <AvgDist>
-            <SubHead2>Avg. Distance</SubHead2>
-            <SubHead1>{selected.distance}</SubHead1>
-          </AvgDist>
-          <EstTime>
-            <SubHead2>Est. Travel Time</SubHead2>
-            <SubHead1>{selected.travel}</SubHead1>
-          </EstTime>
+          <Info>
+            <AvgDist>
+              <SubHead2>Avg. Distance</SubHead2>
+              <SubHead1>{selected.distance}</SubHead1>
+            </AvgDist>
+            <EstTime>
+              <SubHead2>Est. Travel Time</SubHead2>
+              <SubHead1>{selected.travel}</SubHead1>
+            </EstTime>
+          </Info>
         </Destinations>
-      </Section>
+      </DestinationSection>
     </DestinationWrapper>
   );
 }
