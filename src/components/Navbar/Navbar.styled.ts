@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledNavbar = styled.nav`
   display: none;
-
   @media (min-width: 768px) {
     display: inline-flex;
     justify-content: center;
@@ -21,19 +20,36 @@ export const StyledNavbar = styled.nav`
 export const MenuItems = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 20px;
   align-items: center;
   width: 100%;
+
+  @media (min-width: 768px) {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 48px;
+    justify-content: baseline;
+  }
 `;
 
 export const MenuItem = styled.li`
   ${(props) => props.theme.barlowCondesedLight}
   position: relative;
-  margin-inline: 20px;
+
+  @media (min-width: 1440px) {
+    &:first-of-type {
+      margin-left: 123px;
+    }
+  }
 
   & span {
+    display: none;
     font-weight: bold;
+    @media (min-width: 1440px) {
+      display: inline-block;
+    }
   }
 
   & > a {

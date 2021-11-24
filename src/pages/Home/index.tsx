@@ -1,11 +1,11 @@
-import { BodyText, H1, H5 } from 'styles/GlobalStyle';
-import { ExploreButton, Hero } from './Home.styled';
+import { BodyText, H1, H5, Section } from 'styles/GlobalStyle';
+import { ExploreButton, HomeWrapper } from './Home.styled';
 
 export default function HomePage() {
   return (
-    <>
-      <Hero>
-        <H5 as='p'>So, you want to travel to</H5>
+    <HomeWrapper>
+      <Section>
+        <H5>So, you want to travel to</H5>
         <H1>space</H1>
         <BodyText>
           Let’s face it; if you want to go to space, you might as well genuinely
@@ -13,8 +13,8 @@ export default function HomePage() {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </BodyText>
-      </Hero>
-      <ExploreButton>Explore</ExploreButton>
-    </>
+        <ExploreButton>Explore</ExploreButton>
+      </Section>
+    </HomeWrapper>
   );
 }

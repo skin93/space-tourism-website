@@ -1,7 +1,4 @@
 import styled, { createGlobalStyle, css } from 'styled-components';
-import HomeMobile from 'assets/home/background-home-mobile.jpg';
-import HomeTablet from 'assets/home/background-home-tablet.jpg';
-import HomeDesktop from 'assets/home/background-home-desktop.jpg';
 
 export const theme = {
   colors: {
@@ -104,23 +101,14 @@ export const SubHead1 = styled.p`
 `;
 
 export const SubHead2 = styled.p`
-  ${theme.barlowCondesedLight}
+  ${theme.barlowCondesedLight};
+  color: ${theme.colors.accent};
   font-size: 14px;
   letter-spacing: 2.35px;
 `;
 
-export const Main = styled.main`
-  margin-top: 46px;
-  padding-inline: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* height: 100vh; */
-  /* min-height: 100vh; */
-`;
-
 export const Text = styled.p`
-  ${theme.barlowLight}
+  ${theme.barlowLight};
   color: ${theme.colors.accent};
   font-size: 1.125rem;
   line-height: 2;
@@ -136,12 +124,51 @@ export const BodyText = styled.p`
 
   @media (min-width: 768px) {
     font-size: 16px;
-    line-height: 28;
+    line-height: 2.8;
   }
 
   @media (min-width: 1440px) {
     font-size: 18px;
     line-height: 32;
+  }
+`;
+
+export const InteractiveElement = styled.div`
+  ${theme.barlowCondesedLight}
+  letter-spacing: 2.7px;
+  & span {
+    color: ${theme.colors.light};
+    opacity: 25%;
+  }
+`;
+
+export const Divider = styled.div`
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: ${theme.colors.light};
+  opacity: 25.15%;
+`;
+
+export const Wrapper = styled.main`
+  min-height: 100vh;
+  text-align: center;
+  padding-inline: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+`;
+
+export const Section = styled.section`
+  padding-top: 112px;
+  padding-bottom: 52px;
+
+  @media (min-width: 768px) {
+    padding-top: 202px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 392px;
   }
 `;
 
@@ -152,23 +179,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
-body {
 
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(${HomeMobile});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  @media (min-width: 768px){
-    background-image: url(${HomeTablet});
-  }
-
-  @media (min-width: 1440px){
-    background-image: url(${HomeDesktop});
-  }
-}
 
 a {
   ${theme.barlowCondesedLight};

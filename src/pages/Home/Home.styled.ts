@@ -1,11 +1,19 @@
 import styled from 'styled-components';
+import HomeMobile from 'assets/home/background-home-mobile.jpg';
+import HomeTablet from 'assets/home/background-home-tablet.jpg';
+import HomeDesktop from 'assets/home/background-home-desktop.jpg';
+import { Wrapper } from 'styles/GlobalStyle';
 
-export const Hero = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%; */
+export const HomeWrapper = styled(Wrapper)`
+  background-image: url(${HomeMobile});
+
+  @media (min-width: 768px) {
+    background-image: url(${HomeTablet});
+  }
+
+  @media (min-width: 1440px) {
+    background-image: url(${HomeDesktop});
+  }
 `;
 
 export const ExploreButton = styled.button`

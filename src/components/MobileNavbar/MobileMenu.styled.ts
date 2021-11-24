@@ -6,7 +6,7 @@ export const MobileNav = styled.nav<MobileNavbarProps>`
   z-index: 100;
   top: 0;
   right: 0;
-  bottom: 0;
+  min-height: 100vh;
   width: 68%;
   display: ${(props) => (props.open ? 'block' : 'none')};
   padding: 24px;

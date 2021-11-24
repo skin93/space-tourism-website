@@ -2,11 +2,14 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   display: flex;
+  position: absolute;
+
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background: transparent;
-  margin-top: 24px;
+  height: 96px;
+
   @media (min-width: 768px) {
     margin-top: 0;
   }
