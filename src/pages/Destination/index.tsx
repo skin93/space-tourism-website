@@ -12,6 +12,7 @@ import {
   AvgDist,
   EstTime,
   Info,
+  Container,
 } from './Destination.styled';
 
 type Destination = {
@@ -65,30 +66,32 @@ export default function DestinationPage() {
         <InteractiveElement>
           <span>01</span> Pick Your Destination
         </InteractiveElement>
-        <Img src={selected?.images.png} alt='destination' />
-        <Destinations>
-          {destinations?.map((destination) => (
-            <DestinationElement
-              className={selected?.name === destination.name ? 'active' : ''}
-              onClick={() => setSelected(destination)}
-              key={destination.name}>
-              {destination.name}
-            </DestinationElement>
-          ))}
-          <Name>{selected.name}</Name>
-          <Description>{selected.description}</Description>
-          <StyledDivider />
-          <Info>
-            <AvgDist>
-              <SubHead2>Avg. Distance</SubHead2>
-              <SubHead1>{selected.distance}</SubHead1>
-            </AvgDist>
-            <EstTime>
-              <SubHead2>Est. Travel Time</SubHead2>
-              <SubHead1>{selected.travel}</SubHead1>
-            </EstTime>
-          </Info>
-        </Destinations>
+        <Container>
+          <Img src={selected?.images.png} alt='destination' />
+          <Destinations>
+            {destinations?.map((destination) => (
+              <DestinationElement
+                className={selected?.name === destination.name ? 'active' : ''}
+                onClick={() => setSelected(destination)}
+                key={destination.name}>
+                {destination.name}
+              </DestinationElement>
+            ))}
+            <Name>{selected.name}</Name>
+            <Description>{selected.description}</Description>
+            <StyledDivider />
+            <Info>
+              <AvgDist>
+                <SubHead2>Avg. Distance</SubHead2>
+                <SubHead1>{selected.distance}</SubHead1>
+              </AvgDist>
+              <EstTime>
+                <SubHead2>Est. Travel Time</SubHead2>
+                <SubHead1>{selected.travel}</SubHead1>
+              </EstTime>
+            </Info>
+          </Destinations>
+        </Container>
       </DestinationSection>
     </DestinationWrapper>
   );

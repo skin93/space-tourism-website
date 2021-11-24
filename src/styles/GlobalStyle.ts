@@ -147,6 +147,12 @@ export const InteractiveElement = styled.div`
     font-size: 20px;
     letter-spacing: 3.38px;
   }
+
+  @media (min-width: 1440px) {
+    margin-left: 166.5px;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+  }
 `;
 
 export const Divider = styled.div`
