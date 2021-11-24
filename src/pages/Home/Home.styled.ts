@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import HomeMobile from 'assets/home/background-home-mobile.jpg';
 import HomeTablet from 'assets/home/background-home-tablet.jpg';
 import HomeDesktop from 'assets/home/background-home-desktop.jpg';
-import { Wrapper } from 'styles/GlobalStyle';
+import { Section, Wrapper } from 'styles/GlobalStyle';
 
 export const HomeWrapper = styled(Wrapper)`
   background-image: url(${HomeMobile});
@@ -16,15 +16,22 @@ export const HomeWrapper = styled(Wrapper)`
   }
 `;
 
+export const HomeSection = styled(Section)``;
+
+export const Hero = styled.div`
+  width: 327px;
+  margin-inline: auto;
+`;
+
 export const ExploreButton = styled.button`
   position: relative;
   width: 150px;
   height: 150px;
-  margin: calc(100vh / 8.23) auto 0;
   border-radius: 50%;
   background-color: #fff;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 81px;
   letter-spacing: 1.25px;
   font-size: 20px;
   color: ${(props) => props.theme.colors.dark};

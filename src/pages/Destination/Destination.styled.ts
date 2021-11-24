@@ -99,18 +99,12 @@ export const Name = styled(H2)`
 
 export const Description = styled(BodyText)`
   margin-top: 1px;
-  font-size: 15px;
-  line-height: 2.5;
   @media (min-width: 768px) {
     margin-inline: auto;
     width: 573px;
-    font-size: 16px;
-    letter-spacing: 2.8;
   }
 
   @media (min-width: 1440px) {
-    font-size: 18px;
-    letter-spacing: 3.2;
     text-align: left;
     width: 444px;
   }

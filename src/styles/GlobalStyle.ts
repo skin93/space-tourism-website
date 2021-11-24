@@ -119,8 +119,8 @@ export const Text = styled.p`
 export const BodyText = styled.p`
   ${theme.barlowLight}
   color: ${(props) => props.theme.colors.accent};
-  line-height: 2;
   font-size: 15px;
+  line-height: 2.5;
   text-align: center;
 
   @media (min-width: 768px) {
