@@ -20,7 +20,12 @@ export const HomeSection = styled(Section)``;
 
 export const Hero = styled.div`
   width: 327px;
+
   margin-inline: auto;
+
+  @media (min-width: 768px) {
+    width: 450px;
+  }
 `;
 
 export const ExploreButton = styled.button`

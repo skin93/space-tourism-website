@@ -33,11 +33,12 @@ export const H1 = styled.h1`
   ${theme.bellefairLight}
   letter-spacing: 0;
   font-size: 80px;
-  line-height: 1.7;
   text-align: center;
+  margin-block: 1rem;
 
   @media (min-width: 768px) {
     font-size: 150px;
+    margin-block: 24px;
   }
 
   @media (min-width: 1440px) {
