@@ -121,17 +121,15 @@ export const BodyText = styled.p`
   ${theme.barlowLight}
   color: ${(props) => props.theme.colors.accent};
   font-size: 15px;
-  line-height: 2.5;
+  line-height: 2;
   text-align: center;
 
   @media (min-width: 768px) {
     font-size: 16px;
-    line-height: 2.8;
   }
 
   @media (min-width: 1440px) {
     font-size: 18px;
-    line-height: 3.2;
   }
 `;
 

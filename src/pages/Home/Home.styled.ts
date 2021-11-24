@@ -16,15 +16,32 @@ export const HomeWrapper = styled(Wrapper)`
   }
 `;
 
-export const HomeSection = styled(Section)``;
+export const HomeSection = styled(Section)`
+  @media (min-width: 1440px) {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    justify-content: center;
+
+    @media (min-width: 1440px) {
+      & * {
+        text-align: left;
+      }
+    }
+  }
+`;
 
 export const Hero = styled.div`
   width: 327px;
-
   margin-inline: auto;
 
   @media (min-width: 768px) {
     width: 450px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-inline: 0 auto;
   }
 `;
 
@@ -50,7 +67,7 @@ export const ExploreButton = styled.button`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: -1;
+      z-index: 1;
       width: 242px;
       height: 242px;
       border-radius: 50%;
@@ -76,6 +93,7 @@ export const ExploreButton = styled.button`
   @media (min-width: 1440px) {
     width: 274px;
     height: 274px;
+    margin-block: auto 0;
 
     &:hover {
       &::before {
