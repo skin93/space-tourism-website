@@ -14,7 +14,7 @@ export const StyledHeader = styled.header`
     margin-top: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     margin-top: 40px;
   }
 `;
