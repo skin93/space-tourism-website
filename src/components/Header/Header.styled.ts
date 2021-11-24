@@ -54,7 +54,7 @@ export const Line = styled.div`
   @media (min-width: 1440px) {
     position: absolute;
     display: inline-block;
-    margin-left: 300px;
+    margin-left: 167px;
     z-index: 100;
     width: 473px;
     height: 1px;

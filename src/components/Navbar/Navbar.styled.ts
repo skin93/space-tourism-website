@@ -29,8 +29,8 @@ export const MenuItems = styled.ul`
   }
 
   @media (min-width: 1440px) {
+    justify-content: space-between;
     gap: 48px;
-    justify-content: baseline;
   }
 `;
 
@@ -41,6 +41,10 @@ export const MenuItem = styled.li`
   @media (min-width: 1440px) {
     &:first-of-type {
       margin-left: 123px;
+    }
+
+    &:last-of-type {
+      margin-right: 165px;
     }
   }
 
