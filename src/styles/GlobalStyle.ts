@@ -74,7 +74,15 @@ export const H3 = styled.h3`
 
 export const H4 = styled.h4`
   ${theme.bellefairLight}
-  font-size: 32px;
+  font-size: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const H5 = styled.h5`
