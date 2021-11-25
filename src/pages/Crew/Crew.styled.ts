@@ -24,9 +24,6 @@ export const CrewWrapper = styled(Wrapper)`
 `;
 
 export const CrewSection = styled(Section)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   @media (min-width: 768px) {
     padding-top: 136px;
     padding-bottom: 62px;
@@ -39,6 +36,13 @@ export const CrewSection = styled(Section)`
 `;
 
 export const Container = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 592px;
+    margin-inline: auto;
+  }
+
   @media (min-width: 1440px) {
     display: flex;
     gap: 157px;
@@ -51,10 +55,18 @@ export const Container = styled.div`
 
 export const ImgWrapper = styled.div`
   width: 100%;
-
   margin-block: 2rem;
   border-bottom: 1px solid;
   border-color: rgba(255, 255, 255, 0.25);
+
+  @media (min-width: 768px) {
+    position: absolute;
+    order: 3;
+    border: none;
+    margin-block: 0;
+    bottom: 0;
+    right: 0;
+  }
 `;
 
 export const Img = styled.img`
@@ -62,17 +74,16 @@ export const Img = styled.img`
   margin-inline: auto;
 
   @media (min-width: 768px) {
-    width: 458px;
-  }
-
-  @media (min-width: 1440px) {
-    width: 445px;
-    height: 445px;
+    height: 532px;
   }
 `;
 
 export const Crews = styled.ul`
   display: block;
+
+  @media (min-width: 768px) {
+    order: 2;
+  }
 
   @media (min-width: 1440px) {
     width: 444px;
@@ -95,7 +106,21 @@ export const CrewElement = styled.li`
 `;
 
 export const Person = styled.div`
+  @media (min-width: 768px) {
+    order: 1;
+    height: 182px;
+
+    margin-inline: auto;
+    margin-block: 60px 40px;
+  }
+`;
+
+export const Block = styled.div`
   margin-block: 2rem 1rem;
+
+  @media (min-width: 768px) {
+    margin-block: 0 1rem;
+  }
 `;
 
 export const Role = styled(H4)`
@@ -116,7 +141,6 @@ export const Name = styled(H3)``;
 export const Bio = styled(BodyText)`
   @media (min-width: 768px) {
     margin-inline: auto;
-    width: 573px;
   }
 
   @media (min-width: 1440px) {

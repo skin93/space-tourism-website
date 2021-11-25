@@ -10,6 +10,7 @@ import {
   Img,
   ImgWrapper,
   Name,
+  Block,
   Person,
   Role,
 } from './Crew.styled';
@@ -62,10 +63,10 @@ export default function CrewPage() {
         <InteractiveElement>
           <span>02</span> Meet Your crew
         </InteractiveElement>
-        <ImgWrapper>
-          <Img src={selected?.images.png} alt='crew' />
-        </ImgWrapper>
         <Container>
+          <ImgWrapper>
+            <Img src={selected?.images.png} alt='crew' />
+          </ImgWrapper>
           <Crews>
             {crews?.map((crew) => (
               <CrewElement
@@ -76,10 +77,12 @@ export default function CrewPage() {
             ))}
           </Crews>
           <Person>
-            <Role>{selected.role}</Role>
-            <Name>{selected.name}</Name>
+            <Block>
+              <Role>{selected.role}</Role>
+              <Name>{selected.name}</Name>
+            </Block>
+            <Bio>{selected.bio}</Bio>
           </Person>
-          <Bio>{selected.bio}</Bio>
         </Container>
       </CrewSection>
     </CrewWrapper>
