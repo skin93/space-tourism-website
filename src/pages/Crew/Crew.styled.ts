@@ -85,7 +85,6 @@ export const Crews = styled.ul`
   }
 
   @media (min-width: 1440px) {
-    width: 100%;
     text-align: left;
     position: absolute;
     bottom: 96px;
