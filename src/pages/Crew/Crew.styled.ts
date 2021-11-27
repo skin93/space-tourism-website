@@ -1,12 +1,5 @@
 import styled from 'styled-components';
-import {
-  BodyText,
-  Divider,
-  H3,
-  H4,
-  Section,
-  Wrapper,
-} from 'styles/GlobalStyle';
+import { BodyText, H3, H4, Section, Wrapper } from 'styles/GlobalStyle';
 import CrewMobile from 'assets/crew/background-crew-mobile.jpg';
 import CrewTablet from 'assets/crew/background-crew-tablet.jpg';
 import CrewDesktop from 'assets/crew/background-crew-desktop.jpg';
@@ -44,12 +37,8 @@ export const Container = styled.div`
   }
 
   @media (min-width: 1440px) {
-    display: flex;
-    gap: 157px;
-    width: 1047px;
-    height: 478px;
-    margin-inline: auto;
-    margin-top: 100px;
+    flex-direction: row;
+    width: 100%;
   }
 `;
 
@@ -67,6 +56,10 @@ export const ImgWrapper = styled.div`
     bottom: 0;
     right: 0;
   }
+
+  @media (min-width: 1440px) {
+    width: 50%;
+  }
 `;
 
 export const Img = styled.img`
@@ -74,20 +67,28 @@ export const Img = styled.img`
   margin-inline: auto;
 
   @media (min-width: 768px) {
-    height: 532px;
+    height: 500px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 660px;
   }
 `;
 
 export const Crews = styled.ul`
   display: block;
+  order: 1;
 
   @media (min-width: 768px) {
-    order: 2;
+    order: 3;
+    margin-top: 40px;
   }
 
   @media (min-width: 1440px) {
-    width: 444px;
+    width: 100%;
     text-align: left;
+    position: absolute;
+    bottom: 96px;
   }
 `;
 
@@ -103,22 +104,38 @@ export const CrewElement = styled.li`
   &.active {
     background-color: ${(props) => props.theme.colors.light};
   }
-`;
 
-export const Person = styled.div`
-  @media (min-width: 768px) {
-    order: 1;
-    height: 182px;
-
-    margin-inline: auto;
-    margin-block: 60px 40px;
+  @media (min-width: 1440px) {
+    width: 15px;
+    height: 15px;
   }
 `;
 
-export const Block = styled.div`
+export const Person = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 60px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 50%;
+    margin-left: 0;
+    margin-top: 154px;
+    margin-left: 166px;
+    text-align: left;
+  }
+`;
+
+export const Introduction = styled.div`
+  order: 2;
   margin-block: 2rem 1rem;
 
   @media (min-width: 768px) {
+    order: 1;
     margin-block: 0 1rem;
   }
 `;
@@ -139,12 +156,15 @@ export const Role = styled(H4)`
 export const Name = styled(H3)``;
 
 export const Bio = styled(BodyText)`
+  order: 3;
   @media (min-width: 768px) {
+    order: 2;
     margin-inline: auto;
   }
 
   @media (min-width: 1440px) {
     text-align: left;
-    width: 444px;
+    width: 65%;
+    margin-inline: 0 auto;
   }
 `;

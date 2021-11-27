@@ -10,7 +10,7 @@ import {
   Img,
   ImgWrapper,
   Name,
-  Block,
+  Introduction,
   Person,
   Role,
 } from './Crew.styled';
@@ -67,21 +67,21 @@ export default function CrewPage() {
           <ImgWrapper>
             <Img src={selected?.images.png} alt='crew' />
           </ImgWrapper>
-          <Crews>
-            {crews?.map((crew) => (
-              <CrewElement
-                className={selected?.name === crew.name ? 'active' : ''}
-                onClick={() => setSelected(crew)}
-                key={crew.name}
-              />
-            ))}
-          </Crews>
           <Person>
-            <Block>
+            <Introduction>
               <Role>{selected.role}</Role>
               <Name>{selected.name}</Name>
-            </Block>
+            </Introduction>
             <Bio>{selected.bio}</Bio>
+            <Crews>
+              {crews?.map((crew) => (
+                <CrewElement
+                  className={selected?.name === crew.name ? 'active' : ''}
+                  onClick={() => setSelected(crew)}
+                  key={crew.name}
+                />
+              ))}
+            </Crews>
           </Person>
         </Container>
       </CrewSection>

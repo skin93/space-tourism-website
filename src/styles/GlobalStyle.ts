@@ -156,7 +156,7 @@ export const InteractiveElement = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin-left: 166.5px;
+    margin-left: 166px;
     font-size: 28px;
     letter-spacing: 4.72px;
   }
@@ -184,6 +184,7 @@ export const Wrapper = styled.main`
 `;
 
 export const Section = styled.section`
+  height: 100vh;
   padding-top: 112px;
   padding-bottom: 52px;
 
