@@ -4,7 +4,7 @@ import { MobileNavbarProps } from '.';
 export const MobileNav = styled.nav<MobileNavbarProps>`
   position: absolute;
   z-index: 100;
-  top: 0;
+  top: -24px;
   right: 0;
   min-height: 100vh;
   width: 68%;

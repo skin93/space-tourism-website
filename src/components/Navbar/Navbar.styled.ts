@@ -5,15 +5,14 @@ export const StyledNavbar = styled.nav`
   @media (min-width: 768px) {
     display: inline-flex;
     justify-content: center;
-    margin-left: auto;
-    width: 450px;
-    height: 96px;
+    width: 61%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
   }
 
   @media (min-width: 1440px) {
-    width: 830px;
+    width: 60%;
   }
 `;
 
@@ -30,7 +29,6 @@ export const MenuItems = styled.ul`
 
   @media (min-width: 1440px) {
     justify-content: space-between;
-    gap: 48px;
   }
 `;
 
@@ -51,6 +49,7 @@ export const MenuItem = styled.li`
   & span {
     display: none;
     font-weight: bold;
+    margin-right: 11px;
     @media (min-width: 1440px) {
       display: inline-block;
     }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  HeaderWrapper,
   Icon,
   IconWrapper,
   Line,
@@ -16,20 +17,22 @@ import MobileNavbar from 'components/MobileNavbar';
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <StyledHeader>
-      <LogoWrapper>
-        <Logo src={logo} alt='Logo' />
-      </LogoWrapper>
-      <IconWrapper>
-        <Icon
-          src={open ? iconClose : hamburger}
-          alt='Icon'
-          onClick={() => setOpen(!open)}
-        />
-      </IconWrapper>
-      <Line />
-      <Navbar />
-      <MobileNavbar open={open} />
-    </StyledHeader>
+    <HeaderWrapper>
+      <StyledHeader>
+        <LogoWrapper>
+          <Logo src={logo} alt='Logo' />
+        </LogoWrapper>
+        <IconWrapper>
+          <Icon
+            src={open ? iconClose : hamburger}
+            alt='Icon'
+            onClick={() => setOpen(!open)}
+          />
+        </IconWrapper>
+        {/* <Line /> */}
+        <Navbar />
+        <MobileNavbar open={open} />
+      </StyledHeader>
+    </HeaderWrapper>
   );
 }

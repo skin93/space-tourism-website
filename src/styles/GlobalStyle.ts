@@ -181,6 +181,12 @@ export const Wrapper = styled.main`
   @media (min-width: 768px) {
     padding-inline: 39px;
   }
+
+  @media (min-width: 1440px) {
+    width: 93%;
+    margin-left: auto;
+    padding-inline: 39px;
+  }
 `;
 
 export const Section = styled.section`
@@ -202,6 +208,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+  background: #0B0D17
 }
 
 

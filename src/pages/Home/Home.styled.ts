@@ -18,17 +18,14 @@ export const HomeWrapper = styled(Wrapper)`
 
 export const HomeSection = styled(Section)`
   @media (min-width: 1440px) {
+    & * {
+      text-align: left;
+    }
     width: 1100px;
     display: flex;
     flex-direction: row;
     margin-inline: auto;
     justify-content: center;
-
-    @media (min-width: 1440px) {
-      & * {
-        text-align: left;
-      }
-    }
   }
 `;
 
