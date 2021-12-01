@@ -192,7 +192,6 @@ export const Wrapper = styled.main`
 export const Section = styled.section`
   height: 100vh;
   padding-top: 112px;
-  padding-bottom: 52px;
 
   @media (min-width: 768px) {
     padding-top: 202px;

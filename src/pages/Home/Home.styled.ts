@@ -17,11 +17,17 @@ export const HomeWrapper = styled(Wrapper)`
 `;
 
 export const HomeSection = styled(Section)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 93vh;
+
   @media (min-width: 1440px) {
     & * {
       text-align: left;
     }
-    width: 1100px;
+    width: 72vw;
     display: flex;
     flex-direction: row;
     margin-inline: auto;
@@ -46,11 +52,11 @@ export const ExploreButton = styled.button`
   position: relative;
   width: 150px;
   height: 150px;
+  border: none;
   border-radius: 50%;
   background-color: #fff;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 81px;
   letter-spacing: 1.25px;
   font-size: 20px;
   color: ${(props) => props.theme.colors.dark};
@@ -90,7 +96,7 @@ export const ExploreButton = styled.button`
   @media (min-width: 1440px) {
     width: 274px;
     height: 274px;
-    margin-block: auto 0;
+    margin-bottom: 126px
 
     &:hover {
       &::before {
