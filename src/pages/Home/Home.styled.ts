@@ -27,11 +27,9 @@ export const HomeSection = styled(Section)`
     & * {
       text-align: left;
     }
-    width: 72vw;
+    width: 80vw;
     display: flex;
     flex-direction: row;
-    margin-inline: auto;
-    justify-content: center;
   }
 `;
 
@@ -96,7 +94,7 @@ export const ExploreButton = styled.button`
   @media (min-width: 1440px) {
     width: 274px;
     height: 274px;
-    margin-bottom: 126px
+    margin-top: 5%;
 
     &:hover {
       &::before {

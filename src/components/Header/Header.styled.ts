@@ -33,7 +33,7 @@ export const StyledHeader = styled.header`
   }
 
   @media (min-width: 1440px) {
-    width: 96%;
+    width: 96vw;
   }
 `;
 
