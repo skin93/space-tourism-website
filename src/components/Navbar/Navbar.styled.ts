@@ -16,7 +16,7 @@ export const StyledNavbar = styled.nav`
     &:before {
       position: absolute;
       top: 50%;
-      right: 62%;
+      right: 61%;
       transform: translate(-62%, -50%);
       content: '';
       display: flex;
