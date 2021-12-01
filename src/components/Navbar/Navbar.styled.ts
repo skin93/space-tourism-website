@@ -13,6 +13,18 @@ export const StyledNavbar = styled.nav`
 
   @media (min-width: 1440px) {
     width: 60%;
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 62%;
+      transform: translate(-62%, -50%);
+      content: '';
+      display: flex;
+      flex-direction: row;
+      width: 33vw;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2515);
+    }
   }
 `;
 
