@@ -1,11 +1,11 @@
-import styled, { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from "styled-components";
 
 export const theme = {
   colors: {
-    light: '#FFF',
-    dark: '#0B0D17',
-    accent: '#D0D6F9',
-    border: '#979797',
+    light: "#FFF",
+    dark: "#0B0D17",
+    accent: "#D0D6F9",
+    border: "#979797",
   },
   fontFamily: {
     bellefair: "'Bellefair', serif",
@@ -13,17 +13,17 @@ export const theme = {
     barlowCondensed: "'Barlow Condensed', sans-serif",
   },
   bellefairLight: css`
-    font-family: 'Bellefair', serif;
+    font-family: "Bellefair", serif;
     color: #fff;
     text-transform: uppercase;
     font-weight: 400;
   `,
   barlowLight: css`
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow", sans-serif;
     color: #fff;
   `,
   barlowCondesedLight: css`
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
     text-transform: uppercase;
     color: #fff;
   `,
@@ -156,7 +156,7 @@ export const InteractiveElement = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin-left: 25px;
+    margin-left: 9vw;
     font-size: 28px;
     letter-spacing: 4.72px;
   }
@@ -183,8 +183,6 @@ export const Wrapper = styled.main`
   }
 
   @media (min-width: 1440px) {
-    width: 93%;
-    margin-left: auto;
     padding-inline: 39px;
   }
 `;
