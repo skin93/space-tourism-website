@@ -1,5 +1,5 @@
-import { BodyText, H1, H5 } from 'styles/GlobalStyle';
-import { Hero, ExploreButton, HomeWrapper, HomeSection } from './Home.styled';
+import { BodyText, H1, H5 } from "styles/GlobalStyle";
+import { Hero, ExploreButton, HomeWrapper, HomeSection } from "./Home.styled";
 
 export default function HomePage() {
   return (

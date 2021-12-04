@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import HomeMobile from 'assets/home/background-home-mobile.jpg';
-import HomeTablet from 'assets/home/background-home-tablet.jpg';
-import HomeDesktop from 'assets/home/background-home-desktop.jpg';
-import { Section, Wrapper } from 'styles/GlobalStyle';
+import styled from "styled-components";
+import HomeMobile from "assets/home/background-home-mobile.jpg";
+import HomeTablet from "assets/home/background-home-tablet.jpg";
+import HomeDesktop from "assets/home/background-home-desktop.jpg";
+import { Section, Wrapper } from "styles/GlobalStyle";
 
 export const HomeWrapper = styled(Wrapper)`
   background-image: url(${HomeMobile});
@@ -12,6 +12,8 @@ export const HomeWrapper = styled(Wrapper)`
   }
 
   @media (min-width: 1440px) {
+    width: 93%;
+    margin-left: auto;
     background-image: url(${HomeDesktop});
   }
 `;
@@ -63,7 +65,7 @@ export const ExploreButton = styled.button`
 
   &:hover {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
