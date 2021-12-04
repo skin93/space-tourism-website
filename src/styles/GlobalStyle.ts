@@ -142,6 +142,7 @@ export const BodyText = styled.p`
 `;
 
 export const InteractiveElement = styled.div`
+  text-align: center;
   ${theme.barlowCondesedLight}
   letter-spacing: 2.7px;
   & span {
@@ -150,12 +151,12 @@ export const InteractiveElement = styled.div`
   }
 
   @media (min-width: 768px) {
-    text-align: center;
     font-size: 20px;
     letter-spacing: 3.38px;
   }
 
   @media (min-width: 1440px) {
+    text-align: left;
     margin-left: 9vw;
     font-size: 28px;
     letter-spacing: 4.72px;
