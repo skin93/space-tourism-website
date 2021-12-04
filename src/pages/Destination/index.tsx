@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { InteractiveElement, SubHead1, SubHead2 } from 'styles/GlobalStyle';
+import { useEffect, useState } from "react";
+import { InteractiveElement, SubHead1, SubHead2 } from "styles/GlobalStyle";
 import {
   Img,
   DestinationSection,
@@ -13,7 +13,7 @@ import {
   EstTime,
   Info,
   Container,
-} from './Destination.styled';
+} from "./Destination.styled";
 
 type Destination = {
   name: string;
@@ -29,23 +29,23 @@ type Destination = {
 export default function DestinationPage() {
   const [destinations, setDestinations] = useState<Destination[]>([]);
   const [selected, setSelected] = useState<Destination>({
-    name: 'Moon',
+    name: "Moon",
     images: {
-      png: './assets/destination/image-moon.png',
-      webp: './assets/destination/image-moon.webp',
+      png: "./assets/destination/image-moon.png",
+      webp: "./assets/destination/image-moon.webp",
     },
     description:
-      'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
-    distance: '384,400 km',
-    travel: '3 days',
+      "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
+    distance: "384,400 km",
+    travel: "3 days",
   });
 
   const fetchData = async () => {
     try {
-      const res = await fetch('data/data.json', {
+      const res = await fetch("data/data.json", {
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
       });
       const data = await res.json();
@@ -67,13 +67,14 @@ export default function DestinationPage() {
           <span>01</span> Pick Your Destination
         </InteractiveElement>
         <Container>
-          <Img src={selected?.images.png} alt='destination' />
+          <Img src={selected?.images.png} alt="destination" />
           <Destinations>
             {destinations?.map((destination) => (
               <DestinationElement
-                className={selected?.name === destination.name ? 'active' : ''}
+                className={selected?.name === destination.name ? "active" : ""}
                 onClick={() => setSelected(destination)}
-                key={destination.name}>
+                key={destination.name}
+              >
                 {destination.name}
               </DestinationElement>
             ))}

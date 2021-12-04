@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { BodyText, Divider, H2, Section, Wrapper } from 'styles/GlobalStyle';
-import DestinationMobile from 'assets/destination/background-destination-mobile.jpg';
-import DestinationTablet from 'assets/destination/background-destination-tablet.jpg';
-import DestinationDesktop from 'assets/destination/background-destination-desktop.jpg';
+import styled from "styled-components";
+import { BodyText, Divider, H2, Section, Wrapper } from "styles/GlobalStyle";
+import DestinationMobile from "assets/destination/background-destination-mobile.jpg";
+import DestinationTablet from "assets/destination/background-destination-tablet.jpg";
+import DestinationDesktop from "assets/destination/background-destination-desktop.jpg";
 
 export const DestinationWrapper = styled(Wrapper)`
   background-image: url(${DestinationMobile});
@@ -31,10 +31,10 @@ export const Container = styled.div`
   }
   @media (min-width: 1440px) {
     display: flex;
-    gap: 157px;
+    justify-content: space-between;
     width: 73vw;
     height: 53vh;
-    margin-inline: auto;
+    margin-right: 8vw;
     margin-top: 64px;
   }
 `;
@@ -84,7 +84,7 @@ export const DestinationElement = styled.li`
   &.active {
     color: ${(props) => props.theme.colors.light};
     &:after {
-      content: '';
+      content: "";
       top: 24px;
       left: 0;
       position: absolute;
