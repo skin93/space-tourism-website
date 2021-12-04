@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { InteractiveElement } from 'styles/GlobalStyle';
+import { useEffect, useState } from "react";
+import { InteractiveElement } from "styles/GlobalStyle";
 import {
   Container,
   CrewElement,
@@ -13,7 +13,7 @@ import {
   Introduction,
   Person,
   Role,
-} from './Crew.styled';
+} from "./Crew.styled";
 
 type Crew = {
   name: string;
@@ -28,21 +28,21 @@ type Crew = {
 export default function CrewPage() {
   const [crews, setCrews] = useState<Crew[]>([]);
   const [selected, setSelected] = useState<Crew>({
-    name: 'Douglas Hurley',
+    name: "Douglas Hurley",
     images: {
-      png: './assets/crew/image-douglas-hurley.png',
-      webp: './assets/crew/image-douglas-hurley.webp',
+      png: "./assets/crew/image-douglas-hurley.png",
+      webp: "./assets/crew/image-douglas-hurley.webp",
     },
-    role: 'Commander',
-    bio: 'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.',
+    role: "Commander",
+    bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
   });
 
   const fetchData = async () => {
     try {
-      const res = await fetch('data/data.json', {
+      const res = await fetch("data/data.json", {
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
       });
       const data = await res.json();
@@ -65,7 +65,7 @@ export default function CrewPage() {
         </InteractiveElement>
         <Container>
           <ImgWrapper>
-            <Img src={selected?.images.png} alt='crew' />
+            <Img src={selected?.images.png} alt="crew" />
           </ImgWrapper>
           <Person>
             <Introduction>
@@ -76,7 +76,7 @@ export default function CrewPage() {
             <Crews>
               {crews?.map((crew) => (
                 <CrewElement
-                  className={selected?.name === crew.name ? 'active' : ''}
+                  className={selected?.name === crew.name ? "active" : ""}
                   onClick={() => setSelected(crew)}
                   key={crew.name}
                 />

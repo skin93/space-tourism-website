@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { BodyText, H3, H4, Section, Wrapper } from 'styles/GlobalStyle';
-import CrewMobile from 'assets/crew/background-crew-mobile.jpg';
-import CrewTablet from 'assets/crew/background-crew-tablet.jpg';
-import CrewDesktop from 'assets/crew/background-crew-desktop.jpg';
+import styled from "styled-components";
+import { BodyText, H3, H4, Section, Wrapper } from "styles/GlobalStyle";
+import CrewMobile from "assets/crew/background-crew-mobile.jpg";
+import CrewTablet from "assets/crew/background-crew-tablet.jpg";
+import CrewDesktop from "assets/crew/background-crew-desktop.jpg";
 
 export const CrewWrapper = styled(Wrapper)`
   background-image: url(${CrewMobile});
@@ -29,22 +29,26 @@ export const CrewSection = styled(Section)`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
   @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 592px;
+    width: 75vw;
     margin-inline: auto;
   }
-
   @media (min-width: 1440px) {
-    flex-direction: row;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 73vw;
+    margin-left: 8vw;
+    margin-top: 64px;
   }
 `;
 
 export const ImgWrapper = styled.div`
   width: 100%;
-  margin-block: 2rem;
+  margin-top: 2rem;
   border-bottom: 1px solid;
   border-color: rgba(255, 255, 255, 0.25);
 
@@ -71,7 +75,7 @@ export const Img = styled.img`
   }
 
   @media (min-width: 1440px) {
-    height: 660px;
+    height: 70vh;
   }
 `;
 
@@ -113,18 +117,18 @@ export const CrewElement = styled.li`
 export const Person = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 
   @media (min-width: 768px) {
-    width: 100%;
     margin-inline: auto;
-    margin-top: 60px;
+    margin-block: 60px 0;
   }
 
   @media (min-width: 1440px) {
-    width: 50%;
+    width: 48vw;
+    height: 50%;
     margin-left: 0;
-    margin-top: 154px;
-    margin-left: 166px;
+
     text-align: left;
   }
 `;
@@ -156,9 +160,12 @@ export const Name = styled(H3)``;
 
 export const Bio = styled(BodyText)`
   order: 3;
+
   @media (min-width: 768px) {
     order: 2;
     margin-inline: auto;
+    line-clamp: 2;
+    overflow: hidden;
   }
 
   @media (min-width: 1440px) {
