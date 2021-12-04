@@ -18,6 +18,12 @@ export const theme = {
     text-transform: uppercase;
     font-weight: 400;
   `,
+  bellefairDark: css`
+    font-family: "Bellefair", serif;
+    color: #0b0d17;
+    text-transform: uppercase;
+    font-weight: 400;
+  `,
   barlowLight: css`
     font-family: "Barlow", sans-serif;
     color: #fff;
@@ -151,12 +157,12 @@ export const InteractiveElement = styled.div`
   }
 
   @media (min-width: 768px) {
+    text-align: left;
     font-size: 20px;
     letter-spacing: 3.38px;
   }
 
   @media (min-width: 1440px) {
-    text-align: left;
     margin-left: 9vw;
     font-size: 28px;
     letter-spacing: 4.72px;
