@@ -150,7 +150,7 @@ export const InteractiveElement = styled.div`
   }
 
   @media (min-width: 768px) {
-    text-align: left;
+    text-align: center;
     font-size: 20px;
     letter-spacing: 3.38px;
   }
