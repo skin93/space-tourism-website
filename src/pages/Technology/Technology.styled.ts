@@ -13,6 +13,7 @@ export const TechnologyWrapper = styled(Wrapper)`
 
   @media (min-width: 1440px) {
     background-image: url(${TechnologyDesktop});
+    overflow: hidden;
   }
 `;
 
@@ -28,10 +29,12 @@ export const Container = styled.div`
   @media (min-width: 1440px) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
     width: 100vw;
-    margin-right: 8vw;
     margin-top: 64px;
+    padding-inline: 0;
+    margin-inline: 0;
   }
 `;
 
@@ -48,9 +51,11 @@ export const ImgWrapper = styled.div`
 
   @media (min-width: 1440px) {
     order: 3;
+    display: inline-flex;
     position: relative;
-    width: 515px;
-    height: auto;
+    top: 0;
+    width: 36vw;
+    height: 59vh;
   }
 `;
 
@@ -66,12 +71,14 @@ export const Img = styled.div<ImgProps>`
   height: 100%;
   margin-inline: auto;
   background: url(${(props) => props.src.landscape});
-  background-repeat: none;
+  background-repeat: no-repeat
   background-position: center;
   background-size: cover;
 
   @media (min-width: 1440px) {
     background: url(${(props) => props.src.portrait});
+    background-position: center;
+    background-size: cover;
   }
 `;
 
@@ -83,6 +90,8 @@ export const Navigation = styled.ul`
   @media (min-width: 1440px) {
     display: inline-flex;
     flex-direction: column;
+    gap: 2rem;
+    margin-block: 0;
     order: 1;
   }
 `;
@@ -140,10 +149,13 @@ export const Technology = styled.div`
 
   @media (min-width: 1440px) {
     display: inline-flex;
+    flex-direction: column;
     order: 2;
     margin-top: 0;
     width: 33vw;
+    height: 303px;
     text-align: left;
+    margin-inline: 5vw 10vw;
   }
 `;
 
@@ -165,4 +177,8 @@ export const Name = styled(H3)``;
 
 export const Description = styled(BodyText)`
   order: 3;
+  @media (min-width: 1440px) {
+    text-align: left;
+    padding-right: 30px;
+  }
 `;

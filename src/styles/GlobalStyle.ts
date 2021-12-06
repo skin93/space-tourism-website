@@ -178,6 +178,7 @@ export const Divider = styled.div`
 `;
 
 export const Wrapper = styled.main`
+  width: 100vw;
   min-height: 100vh;
   text-align: center;
   padding-inline: 24px;

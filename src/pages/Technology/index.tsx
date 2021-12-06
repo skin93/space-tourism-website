@@ -15,7 +15,7 @@ import {
   SubHead,
 } from "./Technology.styled";
 
-type Technology = {
+type TechnologyProps = {
   name: string;
   images: {
     portrait: string;
@@ -25,8 +25,8 @@ type Technology = {
 };
 
 export default function CrewPage() {
-  const [technologies, setTechnologies] = useState<Technology[]>([]);
-  const [selected, setSelected] = useState<Technology>({
+  const [technologies, setTechnologies] = useState<TechnologyProps[]>([]);
+  const [selected, setSelected] = useState<TechnologyProps>({
     name: "Launch vehicle",
     images: {
       portrait: "./assets/technology/image-launch-vehicle-portrait.jpg",
@@ -72,18 +72,18 @@ export default function CrewPage() {
               <Name>{selected.name}</Name>
             </Introduction>
             <Description>{selected.description}</Description>
-            <Navigation>
-              {technologies?.map((technology, index) => (
-                <NavigationElement
-                  className={selected?.name === technology.name ? "active" : ""}
-                  onClick={() => setSelected(technology)}
-                  key={technology.name}
-                >
-                  <span>{index + 1}</span>
-                </NavigationElement>
-              ))}
-            </Navigation>
           </Technology>
+          <Navigation>
+            {technologies?.map((technology, index) => (
+              <NavigationElement
+                className={selected?.name === technology.name ? "active" : ""}
+                onClick={() => setSelected(technology)}
+                key={technology.name}
+              >
+                <span>{index + 1}</span>
+              </NavigationElement>
+            ))}
+          </Navigation>
         </Container>
       </TechnologySection>
     </TechnologyWrapper>

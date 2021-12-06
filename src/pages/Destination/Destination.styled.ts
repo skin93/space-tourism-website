@@ -31,8 +31,8 @@ export const Container = styled.div`
   }
   @media (min-width: 1440px) {
     display: flex;
-    justify-content: space-between;
     width: 73vw;
+    justify-content: space-between;
     height: 53vh;
     margin-right: 8vw;
     margin-top: 64px;
