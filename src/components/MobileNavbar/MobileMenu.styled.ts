@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { MobileNavbarProps } from '.';
+import styled from "styled-components";
+import { MobileNavbarProps } from ".";
 
 export const MobileNav = styled.nav<MobileNavbarProps>`
   position: absolute;
@@ -8,7 +8,7 @@ export const MobileNav = styled.nav<MobileNavbarProps>`
   right: 0;
   min-height: 100vh;
   width: 68%;
-  display: ${(props) => (props.open ? 'block' : 'none')};
+  display: ${(props) => (props.open ? "block" : "none")};
   padding: 24px;
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px);

@@ -3,6 +3,7 @@ import HomeMobile from "assets/home/background-home-mobile.jpg";
 import HomeTablet from "assets/home/background-home-tablet.jpg";
 import HomeDesktop from "assets/home/background-home-desktop.jpg";
 import { Section, Wrapper } from "styles/GlobalStyle";
+import { Link } from "react-router-dom";
 
 export const HomeWrapper = styled(Wrapper)`
   background-image: url(${HomeMobile});
@@ -46,7 +47,7 @@ export const Hero = styled.div`
   }
 `;
 
-export const ExploreButton = styled.button`
+export const ExploreButton = styled(Link)`
   position: relative;
   width: 150px;
   height: 150px;
@@ -60,6 +61,13 @@ export const ExploreButton = styled.button`
   color: ${(props) => props.theme.colors.dark};
   font-family: ${(props) => props.theme.fontFamily.bellefair};
   cursor: pointer;
+
+  & span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &:hover {
     &::before {

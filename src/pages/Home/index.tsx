@@ -15,7 +15,9 @@ export default function HomePage() {
             world experience!
           </BodyText>
         </Hero>
-        <ExploreButton>Explore</ExploreButton>
+        <ExploreButton to="/destination">
+          <span>Explore</span>
+        </ExploreButton>
       </HomeSection>
     </HomeWrapper>
   );
