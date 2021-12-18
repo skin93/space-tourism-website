@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   HeaderWrapper,
   Icon,
@@ -7,12 +7,12 @@ import {
   Logo,
   LogoWrapper,
   StyledHeader,
-} from './Header.styled';
-import logo from 'assets/shared/logo.svg';
-import hamburger from 'assets/shared/icon-hamburger.svg';
-import iconClose from 'assets/shared/icon-close.svg';
-import Navbar from 'components/Navbar';
-import MobileNavbar from 'components/MobileNavbar';
+} from "./Header.styled";
+import logo from "assets/shared/logo.svg";
+import hamburger from "assets/shared/icon-hamburger.svg";
+import iconClose from "assets/shared/icon-close.svg";
+import Navbar from "components/Navbar";
+import MobileNavbar from "components/MobileNavbar";
 
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false);
@@ -20,12 +20,13 @@ export default function Header() {
     <HeaderWrapper>
       <StyledHeader>
         <LogoWrapper>
-          <Logo src={logo} alt='Logo' />
+          <Logo src={logo} alt="Logo" />
         </LogoWrapper>
+        <Line />
         <IconWrapper>
           <Icon
             src={open ? iconClose : hamburger}
-            alt='Icon'
+            alt="Icon"
             onClick={() => setOpen(!open)}
           />
         </IconWrapper>

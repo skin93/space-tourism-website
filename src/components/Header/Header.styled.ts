@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -61,4 +61,16 @@ export const Icon = styled.img`
   }
 `;
 
-export const Line = styled.div``;
+export const Line = styled.div`
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: inline-flex;
+    position: relative;
+    left: 62px;
+    width: 35vw;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2515);
+    z-index: 100;
+  }
+`;

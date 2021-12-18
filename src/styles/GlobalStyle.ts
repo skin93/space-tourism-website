@@ -191,7 +191,7 @@ export const Wrapper = styled.main`
   }
 
   @media (min-width: 1440px) {
-    padding-inline: 39px;
+    padding-inline: 62px;
   }
 `;
 

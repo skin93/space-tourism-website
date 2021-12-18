@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledNavbar = styled.nav`
   display: none;
@@ -13,18 +13,6 @@ export const StyledNavbar = styled.nav`
 
   @media (min-width: 1440px) {
     width: 60%;
-    &:before {
-      position: absolute;
-      top: 50%;
-      right: 61%;
-      transform: translate(-62%, -50%);
-      content: '';
-      display: flex;
-      flex-direction: row;
-      width: 33vw;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.2515);
-    }
   }
 `;
 
@@ -73,7 +61,7 @@ export const MenuItem = styled.li`
 
     &.active {
       &:after {
-        content: '';
+        content: "";
         top: 54px;
         left: 0;
         position: absolute;
