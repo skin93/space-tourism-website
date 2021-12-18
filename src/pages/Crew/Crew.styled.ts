@@ -40,8 +40,7 @@ export const Container = styled.div`
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
-    width: 73vw;
-    margin-left: 8vw;
+    margin-inline: 0;
     margin-top: 64px;
   }
 `;
@@ -76,6 +75,7 @@ export const Img = styled.img`
 
   @media (min-width: 1440px) {
     height: 70vh;
+    margin-right: 20%;
   }
 `;
 
@@ -127,8 +127,7 @@ export const Person = styled.div`
   @media (min-width: 1440px) {
     width: 48vw;
     height: 50%;
-    margin-left: 0;
-
+    margin-inline: 0;
     text-align: left;
   }
 `;

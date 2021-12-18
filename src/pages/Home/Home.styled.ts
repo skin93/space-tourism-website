@@ -12,8 +12,6 @@ export const HomeWrapper = styled(Wrapper)`
   }
 
   @media (min-width: 1440px) {
-    width: 93%;
-    margin-left: auto;
     background-image: url(${HomeDesktop});
   }
 `;
@@ -29,7 +27,7 @@ export const HomeSection = styled(Section)`
     & * {
       text-align: left;
     }
-    width: 80vw;
+
     display: flex;
     flex-direction: row;
   }
@@ -44,7 +42,7 @@ export const Hero = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin-inline: 0 auto;
+    margin-inline: 0;
   }
 `;
 
@@ -97,6 +95,7 @@ export const ExploreButton = styled.button`
     width: 274px;
     height: 274px;
     margin-top: 5%;
+    margin-right: 10%;
 
     &:hover {
       &::before {

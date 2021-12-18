@@ -30,7 +30,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 100vw;
     margin-top: 64px;
     padding-inline: 0;
@@ -153,7 +153,7 @@ export const Technology = styled.div`
     order: 2;
     margin-top: 0;
     width: 33vw;
-    height: 303px;
+    height: 100%;
     text-align: left;
     margin-inline: 5vw 10vw;
   }
@@ -162,6 +162,10 @@ export const Technology = styled.div`
 export const Introduction = styled.div`
   margin-block: 2rem 1rem;
   order: 2;
+
+  @media (min-width: 1440px) {
+    margin-top: 0;
+  }
 `;
 
 export const SubHead = styled(SubHead2)`

@@ -16,25 +16,18 @@ export const DestinationWrapper = styled(Wrapper)`
   }
 `;
 
-export const DestinationSection = styled(Section)`
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 1440px) {
-  }
-`;
+export const DestinationSection = styled(Section)``;
 
 export const Container = styled.div`
   @media (min-width: 768px) {
-    width: 75vw;
     margin-inline: auto;
   }
   @media (min-width: 1440px) {
     display: flex;
-    width: 73vw;
-    justify-content: space-between;
-    height: 53vh;
-    margin-right: 8vw;
+    margin-inline: auto;
+    /* gap: 20%; */
+    align-items: center;
+    justify-content: space-around;
     margin-top: 64px;
   }
 `;

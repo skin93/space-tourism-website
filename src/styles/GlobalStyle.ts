@@ -163,7 +163,7 @@ export const InteractiveElement = styled.div`
   }
 
   @media (min-width: 1440px) {
-    margin-left: 9vw;
+    margin-left: auto;
     font-size: 28px;
     letter-spacing: 4.72px;
   }
@@ -178,7 +178,7 @@ export const Divider = styled.div`
 `;
 
 export const Wrapper = styled.main`
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   text-align: center;
   padding-inline: 24px;
@@ -205,6 +205,8 @@ export const Section = styled.section`
 
   @media (min-width: 1440px) {
     padding-top: 212px;
+    width: 93%;
+    margin-left: auto;
   }
 `;
 
