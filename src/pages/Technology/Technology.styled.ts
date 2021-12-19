@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { BodyText, H3, SubHead2, Section, Wrapper } from "styles/GlobalStyle";
-import TechnologyMobile from "assets/technology/background-technology-mobile.jpg";
-import TechnologyTablet from "assets/technology/background-technology-tablet.jpg";
-import TechnologyDesktop from "assets/technology/background-technology-desktop.jpg";
+import TechnologyMobile from "img/backgrounds/technology/background-technology-mobile.jpg";
+import TechnologyTablet from "img/backgrounds/technology/background-technology-tablet.jpg";
+import TechnologyDesktop from "img/backgrounds/technology/background-technology-desktop.jpg";
 
 export const TechnologyWrapper = styled(Wrapper)`
   background-image: url(${TechnologyMobile});

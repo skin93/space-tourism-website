@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { BodyText, Divider, H2, Section, Wrapper } from "styles/GlobalStyle";
-import DestinationMobile from "assets/destination/background-destination-mobile.jpg";
-import DestinationTablet from "assets/destination/background-destination-tablet.jpg";
-import DestinationDesktop from "assets/destination/background-destination-desktop.jpg";
+import DestinationMobile from "img/backgrounds/destination/background-destination-mobile.jpg";
+import DestinationTablet from "img/backgrounds/destination/background-destination-tablet.jpg";
+import DestinationDesktop from "img/backgrounds/destination/background-destination-desktop.jpg";
 
 export const DestinationWrapper = styled(Wrapper)`
   background-image: url(${DestinationMobile});

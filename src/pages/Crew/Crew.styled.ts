@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { BodyText, H3, H4, Section, Wrapper } from "styles/GlobalStyle";
-import CrewMobile from "assets/crew/background-crew-mobile.jpg";
-import CrewTablet from "assets/crew/background-crew-tablet.jpg";
-import CrewDesktop from "assets/crew/background-crew-desktop.jpg";
+import CrewMobile from "img/backgrounds/crew/background-crew-mobile.jpg";
+import CrewTablet from "img/backgrounds/crew/background-crew-tablet.jpg";
+import CrewDesktop from "img/backgrounds/crew/background-crew-desktop.jpg";
 
 export const CrewWrapper = styled(Wrapper)`
   background-image: url(${CrewMobile});

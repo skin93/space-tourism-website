@@ -8,9 +8,9 @@ import {
   LogoWrapper,
   StyledHeader,
 } from "./Header.styled";
-import logo from "assets/shared/logo.svg";
-import hamburger from "assets/shared/icon-hamburger.svg";
-import iconClose from "assets/shared/icon-close.svg";
+import logo from "img/shared/logo.svg";
+import hamburger from "img/shared/icon-hamburger.svg";
+import iconClose from "img/shared/icon-close.svg";
 import Navbar from "components/Navbar";
 import MobileNavbar from "components/MobileNavbar";
 

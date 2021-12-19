@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import HomeMobile from "assets/home/background-home-mobile.jpg";
-import HomeTablet from "assets/home/background-home-tablet.jpg";
-import HomeDesktop from "assets/home/background-home-desktop.jpg";
+import HomeMobile from "img/backgrounds/home/background-home-mobile.jpg";
+import HomeTablet from "img/backgrounds/home/background-home-tablet.jpg";
+import HomeDesktop from "img/backgrounds/home/background-home-desktop.jpg";
 import { Section, Wrapper } from "styles/GlobalStyle";
 import { Link } from "react-router-dom";
 
