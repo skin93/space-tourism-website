@@ -51,7 +51,7 @@ export default function DestinationPage() {
     fetchData();
   }, []);
 
-  if (!selected) {
+  if (!destinations || !selected) {
     return <div>Loading...</div>;
   }
 
@@ -64,7 +64,7 @@ export default function DestinationPage() {
         <Container>
           <Img src={selected.images.png} alt="destination" />
           <Destinations>
-            {destinations?.map((destination) => (
+            {destinations.map((destination) => (
               <DestinationElement
                 className={selected.name === destination.name ? "active" : ""}
                 onClick={() => setSelected(destination)}

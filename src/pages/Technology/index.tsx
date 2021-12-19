@@ -49,7 +49,7 @@ export default function CrewPage() {
     fetchData();
   }, []);
 
-  if (!selected) {
+  if (!selected || !technologies) {
     return <div>Loading...</div>;
   }
 
@@ -71,7 +71,7 @@ export default function CrewPage() {
             <Description>{selected.description}</Description>
           </Technology>
           <Navigation>
-            {technologies?.map((technology, index) => (
+            {technologies.map((technology, index) => (
               <NavigationElement
                 className={selected?.name === technology.name ? "active" : ""}
                 onClick={() => setSelected(technology)}

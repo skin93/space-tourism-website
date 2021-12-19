@@ -50,7 +50,7 @@ export default function CrewPage() {
     fetchData();
   }, []);
 
-  if (!selected) {
+  if (!selected || !crews) {
     return <div>Loading...</div>;
   }
 
@@ -71,7 +71,7 @@ export default function CrewPage() {
             </Introduction>
             <Bio>{selected.bio}</Bio>
             <Crews>
-              {crews?.map((crew) => (
+              {crews.map((crew) => (
                 <CrewElement
                   className={selected.name === crew.name ? "active" : ""}
                   onClick={() => setSelected(crew)}
