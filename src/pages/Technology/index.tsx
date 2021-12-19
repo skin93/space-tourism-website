@@ -26,15 +26,7 @@ type TechnologyProps = {
 
 export default function CrewPage() {
   const [technologies, setTechnologies] = useState<TechnologyProps[]>([]);
-  const [selected, setSelected] = useState<TechnologyProps>({
-    name: "Launch vehicle",
-    images: {
-      portrait: "./assets/technology/image-launch-vehicle-portrait.jpg",
-      landscape: "./assets/technology/image-launch-vehicle-landscape.jpg",
-    },
-    description:
-      "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
-  });
+  const [selected, setSelected] = useState<TechnologyProps>();
 
   const fetchData = async () => {
     try {
@@ -46,6 +38,7 @@ export default function CrewPage() {
       });
       const data = await res.json();
       const technologies = await data.technology;
+      setSelected(technologies[0]);
       setTechnologies(technologies);
     } catch (error) {
       console.log(error);
@@ -55,6 +48,10 @@ export default function CrewPage() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  if (!selected) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <TechnologyWrapper>

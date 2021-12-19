@@ -27,15 +27,7 @@ type Crew = {
 
 export default function CrewPage() {
   const [crews, setCrews] = useState<Crew[]>([]);
-  const [selected, setSelected] = useState<Crew>({
-    name: "Douglas Hurley",
-    images: {
-      png: "./assets/crew/image-douglas-hurley.png",
-      webp: "./assets/crew/image-douglas-hurley.webp",
-    },
-    role: "Commander",
-    bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
-  });
+  const [selected, setSelected] = useState<Crew>();
 
   const fetchData = async () => {
     try {
@@ -47,6 +39,7 @@ export default function CrewPage() {
       });
       const data = await res.json();
       const crews = await data.crew;
+      setSelected(crews[0]);
       setCrews(crews);
     } catch (error) {
       console.log(error);
@@ -57,6 +50,10 @@ export default function CrewPage() {
     fetchData();
   }, []);
 
+  if (!selected) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <CrewWrapper>
       <CrewSection>
@@ -65,7 +62,7 @@ export default function CrewPage() {
         </InteractiveElement>
         <Container>
           <ImgWrapper>
-            <Img src={selected?.images.png} alt="crew" />
+            <Img src={selected.images.png} alt="crew" />
           </ImgWrapper>
           <Person>
             <Introduction>
@@ -76,7 +73,7 @@ export default function CrewPage() {
             <Crews>
               {crews?.map((crew) => (
                 <CrewElement
-                  className={selected?.name === crew.name ? "active" : ""}
+                  className={selected.name === crew.name ? "active" : ""}
                   onClick={() => setSelected(crew)}
                   key={crew.name}
                 />

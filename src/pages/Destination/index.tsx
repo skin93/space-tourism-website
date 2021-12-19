@@ -28,17 +28,7 @@ type Destination = {
 
 export default function DestinationPage() {
   const [destinations, setDestinations] = useState<Destination[]>([]);
-  const [selected, setSelected] = useState<Destination>({
-    name: "Moon",
-    images: {
-      png: "./assets/destination/image-moon.png",
-      webp: "./assets/destination/image-moon.webp",
-    },
-    description:
-      "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-    distance: "384,400 km",
-    travel: "3 days",
-  });
+  const [selected, setSelected] = useState<Destination>();
 
   const fetchData = async () => {
     try {
@@ -50,15 +40,20 @@ export default function DestinationPage() {
       });
       const data = await res.json();
       const destinations = await data.destinations;
+      setSelected(destinations[0]);
       setDestinations(destinations);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  if (!selected) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <DestinationWrapper>
@@ -67,11 +62,11 @@ export default function DestinationPage() {
           <span>01</span> Pick Your Destination
         </InteractiveElement>
         <Container>
-          <Img src={selected?.images.png} alt="destination" />
+          <Img src={selected.images.png} alt="destination" />
           <Destinations>
             {destinations?.map((destination) => (
               <DestinationElement
-                className={selected?.name === destination.name ? "active" : ""}
+                className={selected.name === destination.name ? "active" : ""}
                 onClick={() => setSelected(destination)}
                 key={destination.name}
               >
