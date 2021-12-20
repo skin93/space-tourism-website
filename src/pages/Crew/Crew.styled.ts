@@ -34,7 +34,7 @@ export const Container = styled.div`
   gap: 2rem;
 
   @media (min-width: 768px) {
-    width: 75vw;
+    width: 80vw;
     margin-inline: auto;
   }
   @media (min-width: 1440px) {
@@ -159,12 +159,15 @@ export const Name = styled(H3)``;
 
 export const Bio = styled(BodyText)`
   order: 3;
+  width: 90%;
+  margin-inline: auto;
 
   @media (min-width: 768px) {
     order: 2;
     margin-inline: auto;
-    line-clamp: 2;
+    line-height: 2;
     overflow: hidden;
+    width: 100%;
   }
 
   @media (min-width: 1440px) {
