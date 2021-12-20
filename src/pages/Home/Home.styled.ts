@@ -20,9 +20,9 @@ export const HomeWrapper = styled(Wrapper)`
 export const HomeSection = styled(Section)`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 100vh;
   align-items: center;
-  height: 93vh;
 
   @media (min-width: 1440px) {
     & * {
@@ -31,11 +31,12 @@ export const HomeSection = styled(Section)`
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
 export const Hero = styled.div`
-  width: 327px;
+  max-width: 100%;
   margin-inline: auto;
 
   @media (min-width: 768px) {
