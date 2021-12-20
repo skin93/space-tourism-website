@@ -20,6 +20,9 @@ export const TechnologyWrapper = styled(Wrapper)`
 export const TechnologySection = styled(Section)``;
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: 768px) {
     width: 63vw;
     margin-inline: auto;
@@ -27,7 +30,6 @@ export const Container = styled.div`
   }
 
   @media (min-width: 1440px) {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -84,8 +86,12 @@ export const Img = styled.div<ImgProps>`
 
 export const Navigation = styled.ul`
   display: block;
-  order: 1;
-  margin-top: 30px;
+  order: 2;
+  margin-top: 35vh;
+
+  @media (min-width: 1024px) {
+    margin-top: 40vh;
+  }
 
   @media (min-width: 1440px) {
     display: inline-flex;
@@ -141,11 +147,7 @@ export const NavigationElement = styled.li`
 export const Technology = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 30vh;
-
-  @media (min-width: 768px) {
-    margin-top: 35vh;
-  }
+  order: 3;
 
   @media (min-width: 1440px) {
     display: inline-flex;
@@ -181,6 +183,9 @@ export const Name = styled(H3)``;
 
 export const Description = styled(BodyText)`
   order: 3;
+
+  width: 100%;
+  margin-inline: auto;
   @media (min-width: 1440px) {
     text-align: left;
     padding-right: 30px;
