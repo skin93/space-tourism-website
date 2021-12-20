@@ -98,8 +98,19 @@ export const Name = styled(H2)`
 export const Description = styled(BodyText)`
   width: 100%;
 
+  @media (min-width: 768px) {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 1024px) {
+    width: 60%;
+    margin-inline: auto;
+  }
+
   @media (min-width: 1440px) {
     text-align: left;
+    width: 100%;
   }
 `;
 
